@@ -8,9 +8,8 @@ const Form = () => {
 
   const [name, setName] = useState('')
   const [disable, setDisable] = useState(1)
-  // let [dataValueAge, setDataValueAge] = useState([])
+  const [clicked, setClicked] = useState(0)
 
-  
   const handleName = (e) => {
     const getName = e.target.value;
     let string = getName;
@@ -22,6 +21,10 @@ const Form = () => {
       setDisable(1)
     }
 
+  }
+  
+  const resetButton = (e) => {
+    setClicked(1)
   }
   const handleSubmit = (e) => {
     if(name.length>=3){
@@ -54,12 +57,6 @@ const Form = () => {
     })
   }
 
-  const resetButton = ()=>{
-     window.location.reload(true);
-  }
-
-  
-
   return (
     <main>
       <div className="pg-header">
@@ -81,7 +78,7 @@ const Form = () => {
           </form>
         </center>
       </div>
-      <table className="table">
+      <table hidden={clicked} className="table">
   <thead>
     <tr>
       <th>Name</th>
