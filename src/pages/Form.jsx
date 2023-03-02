@@ -45,7 +45,7 @@ const Form = () => {
     fetch(API2+name)
     .then((response) => response.json())
     .then((json)=>{
-      setData2(json)
+      setData2(json.country.slice(0,2))
     })
     fetch(API3+name)
     .then((response) => response.json())
@@ -82,16 +82,21 @@ const Form = () => {
       <th>Name</th>
       <th>Gender</th>
       <th>Age</th>
-      <th>Country</th>
+      <th>Top Two Countries</th>
     </tr>
   </thead>
   <tbody>
+    
     <tr>
       <th>{data1.name}</th>
       <th>{JSON.stringify(data3.gender)}</th>
       <th>{JSON.stringify(data1.age)}</th>
-      <th >{JSON.stringify(data2.country)}</th>
-      
+      {data2.map((c, i)=>(
+        <td key ={i}>
+          {c.country_id+", Probability => "}
+          {c.probability}
+        </td>
+      ))}
     </tr>
   </tbody>
 </table>
