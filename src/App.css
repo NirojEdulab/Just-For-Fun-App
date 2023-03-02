@@ -6,17 +6,20 @@ a {
 	text-decoration: none;
 }
 main{
-  background-color: white;
+  background-image: url("/public/assets/background.jpg");
 }
 main .startButton{
   margin-top: 200px;
-  padding-bottom: 0px;
+  height:50vh;
   text-align: center;
   text-decoration-line: none;
 }
 main .content {
 	padding-top: 40px;
 	padding-bottom: 40px;
+}
+.tableContainer{
+  padding: 40px;
 }
 main .pg-header{
   padding: 15px 0;
