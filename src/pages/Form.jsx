@@ -40,21 +40,24 @@ const Form = () => {
     fetch(API1+name)
     .then((response) => response.json())
     .then((json)=>{
+      console.log("apiGet1==>",json);
       setData1(json)
     })
     fetch(API2+name)
     .then((response) => response.json())
     .then((json)=>{
+      console.log("apiGet2==>",json);
       setData2(json)
     })
     fetch(API3+name)
     .then((response) => response.json())
     .then((json)=>{
+      console.log("apiGet3==>",json);
       setData3(json)
     })
   }
 
-
+  
 
   return (
     <main>
@@ -87,10 +90,11 @@ const Form = () => {
   </thead>
   <tbody>
     <tr>
-      <th>{name}</th>
-      <th>{JSON.stringify(data1.id)}</th>
-      <th>{JSON.stringify(data2.brand)}</th>
-      <th>{JSON.stringify(data3.name)}</th>
+      <th>{data1.name}</th>
+      <th>{JSON.stringify(data3.gender)}</th>
+      <th>{JSON.stringify(data1.age)}</th>
+      <th >{JSON.stringify(data2.country)}</th>
+      
     </tr>
   </tbody>
 </table>
