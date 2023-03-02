@@ -17,7 +17,7 @@ const Header = () => {
                     >Home</NavLink>
                     <NavLink to='form'
                     className={(navData) => navData.isActive ? 'nav-link active' : 'nav-link'}
-                    >Form</NavLink>
+                    >Game Page</NavLink>
                 </nav>
             </div>
         </div>

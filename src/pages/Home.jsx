@@ -8,7 +8,7 @@ const Home = () => {
         </div>
       </div>
       <div className="startButton">
-      <Link to='form' className='startButton'><button variant="outlined">Start Fun</button></Link>
+      <Link to='form' className='startButton'><button className="btn btn-primary btn-lg btn-block" id="submit" type="submit">Start Fun</button></Link>
       </div>
       
     </main>

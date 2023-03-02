@@ -54,6 +54,10 @@ const Form = () => {
     })
   }
 
+  const resetButton = ()=>{
+     window.location.reload(true);
+  }
+
   
 
   return (
@@ -69,10 +73,11 @@ const Form = () => {
         <center>
           <br />
           <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Enter Your Name" onChange={e => handleName(e)} />
+            <input type="text" placeholder="Enter Your First Name" onChange={e => handleName(e)} />
             <br />
             <br />
-            <button disabled={disable} id="submit" type="submit" onClick={apiGet1}>Check Fun</button>
+            <button className="btn btn-primary" disabled={disable} id="submit" type="submit" onClick={apiGet1}>Check Fun</button>
+            <button className="btn btn-danger" id="reset" type="reset" onClick={resetButton}>Reset</button>
           </form>
         </center>
       </div>
