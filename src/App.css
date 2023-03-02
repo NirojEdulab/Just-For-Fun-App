@@ -33,6 +33,24 @@ main .pg-header h1{
   margin: 0;
   text-align: center;
 }
+.gamePage .pg-header {
+  padding: 15px 0;
+  background: #e6e6e6;
+}
+.gamePage .pg-header h1{
+  color: #333;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+.gamePage .Gamecontent{
+  padding-top: 15px;
+}
+form .form-control{
+  width: 500px;
+}
 .btn-primary{
   border-radius: 0;
 }

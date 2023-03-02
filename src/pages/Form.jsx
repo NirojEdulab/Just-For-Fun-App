@@ -62,17 +62,16 @@ const Form = () => {
     <div className="gamePage">
       <div className="pg-header">
         <div className="container">
-          <h1>You can start now</h1>
+          <h1>Game Begins</h1>
         </div>
       </div>
-      <div className="container content">
-        <center><span><i>Type anything here, it will take the characters only...</i></span></center>
+      <div className="Gamecontent">
+        <center><span><i>Type your first Name and click on the CheckFun button</i></span></center>
         <hr />
         <center>
           <br />
           <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Enter Your First Name" onChange={e => handleName(e)} />
-            <br />
+            <input type="text" class="form-control" onChange={e => handleName(e)}></input>
             <br />
             <button className="btn btn-primary" disabled={disable} id="submit" type="submit" onClick={apiGet1}>Check Fun</button>
             <button className="btn btn-danger" id="reset" type="reset" onClick={resetButton}>Reset</button>
