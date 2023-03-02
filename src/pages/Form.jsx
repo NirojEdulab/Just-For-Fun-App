@@ -30,6 +30,7 @@ const Form = () => {
     if(name.length>=3){
       e.preventDefault();
       setDisable(1)
+      setClicked(0)
     }else{
       alert("Oops!!! Error Occured...")
     }
