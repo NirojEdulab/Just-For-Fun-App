@@ -40,19 +40,16 @@ const Form = () => {
     fetch(API1+name)
     .then((response) => response.json())
     .then((json)=>{
-      console.log("apiGet1==>",json);
       setData1(json)
     })
     fetch(API2+name)
     .then((response) => response.json())
     .then((json)=>{
-      console.log("apiGet2==>",json);
       setData2(json)
     })
     fetch(API3+name)
     .then((response) => response.json())
     .then((json)=>{
-      console.log("apiGet3==>",json);
       setData3(json)
     })
   }
